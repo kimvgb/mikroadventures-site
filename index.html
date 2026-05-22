@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0180)file:///C:/Users/User/Documents/site/Mikro%20Adventures%20Solu%C3%A7%C3%B5es%20%E2%80%94%20Consultoria%20t%C3%A9cnica%20e%20estrat%C3%A9gica%20em%20alimentos%20&%20bebidas_V13.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Consultoria técnica e estratégica em alimentos, bebidas, suplementos, clean label e agroindústria. Do P&amp;D ao escalonamento industrial — uma década de experiência aplicada.">
+<meta name="theme-color" content="#154535">
+<title>Mikro Adventures Soluções — Consultoria técnica e estratégica em alimentos &amp; bebidas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./index_files/css2" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  /* Type system */
+  --font-display:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-body:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+
+  /* Editorial palette — refined forest + brass on warm bone */
+  --bone:#efe8d9;
+  --bone-light:#f6f0e2;
+  --paper:#fbf6ec;
+  --ink:#0c130e;
+  --ink-soft:#2e3a32;
+  --ink-mute:#6a7570;
+  --ink-faint:#9aa39d;
+
+  --forest:#154535;
+  --forest-deep:#0d2e23;
+  --forest-mid:#2a6b4c;
+  --sage:#d4e0d3;
+  --sage-soft:#e6ede2;
+
+  --brass:#a07535;
+  --brass-deep:#7a5524;
+  --brass-soft:#e6d3aa;
+  --brass-glow:#f3e4bd;
+
+  --rule:rgba(12,19,14,.12);
+  --rule-soft:rgba(12,19,14,.06);
+  --rule-strong:rgba(12,19,14,.22);
+
+  --radius:4px;
+  --radius-md:10px;
+  --shadow-1:0 1px 2px rgba(12,19,14,.04), 0 1px 1px rgba(12,19,14,.03);
+  --shadow-2:0 8px 28px -10px rgba(12,19,14,.12), 0 2px 6px rgba(12,19,14,.04);
+  --shadow-3:0 24px 60px -20px rgba(12,19,14,.2), 0 6px 16px rgba(12,19,14,.06);
+
+  --ease:cubic-bezier(.4,0,.2,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  font-family:var(--font-body);
+  background:var(--bone);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.65;
+  font-weight:400;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-feature-settings:"ss01","cv11","liga";
+}
+
+/* Editorial paper grain */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  opacity:.4;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.05 0 0 0 0 0.07 0 0 0 0 0.05 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+
+h1,h2,h3,h4,h5{
+  font-family:var(--font-display);
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:-0.03em;
+  color:var(--ink);
+}
+
+p{font-feature-settings:"ss01","kern","liga"}
+
+a{color:inherit;text-decoration:none;transition:color .2s var(--ease)}
+
+::selection{background:var(--forest);color:var(--brass-glow)}
+
+:focus-visible{outline:2px solid var(--forest);outline-offset:3px;border-radius:2px}
+
+/* ─────────── ATOMS ─────────── */
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--brass-deep);
+  display:inline-flex;
+  align-items:center;
+  gap:.7rem;
+}
+.eyebrow::before{
+  content:'';
+  width:24px;
+  height:1px;
+  background:var(--brass);
+}
+.eyebrow.center::before{display:none}
+
+.rule-h{height:1px;background:var(--rule);width:100%}
+.rule-v{width:1px;background:var(--rule);height:100%}
+
+/* ─────────── SCROLL PROGRESS ─────────── */
+.scroll-progress{
+  position:fixed;top:0;left:0;height:2px;
+  background:linear-gradient(90deg,var(--forest),var(--brass));
+  z-index:200;width:0;transition:width .1s linear;
+}
+
+/* ─────────── NAV ─────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 2.5rem;
+  background:rgba(239,232,217,.72);
+  backdrop-filter:blur(24px) saturate(1.2);
+  -webkit-backdrop-filter:blur(24px) saturate(1.2);
+  border-bottom:1px solid transparent;
+  transition:padding .25s var(--ease),background .25s,border-color .25s,box-shadow .25s;
+}
+nav.scrolled{
+  padding:.7rem 2.5rem;
+  background:rgba(239,232,217,.92);
+  border-bottom-color:var(--rule);
+  box-shadow:0 1px 30px -10px rgba(12,19,14,.08);
+}
+
+.nav-brand{display:flex;align-items:baseline;gap:.55rem;text-decoration:none;line-height:1}
+.nav-brand-mark{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:1.05rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+.nav-brand-mark em{font-style:normal;color:var(--forest);font-weight:600}
+.nav-brand-tag{
+  font-family:var(--font-mono);
+  font-size:.62rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-mute);
+  font-weight:500;
+  padding-bottom:.1rem;
+}
+
+.nav-links{display:flex;gap:.2rem;list-style:none;align-items:center}
+.nav-links > li > a{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.84rem;font-weight:500;color:var(--ink-soft);
+  padding:.55rem .9rem;border-radius:2px;
+  position:relative;
+}
+.nav-links > li > a .num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.62rem;color:var(--ink-faint);font-weight:400;
+}
+.nav-links > li > a:hover{color:var(--forest)}
+.nav-links > li > a:hover .num{color:var(--brass)}
+.nav-links > li > a.active{color:var(--forest)}
+.nav-links > li > a.active::after{
+  content:'';position:absolute;left:.9rem;right:.9rem;bottom:.35rem;
+  height:1px;background:var(--forest);
+}
+
+.nav-cta{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--ink);color:var(--bone)!important;
+  padding:.7rem 1.25rem!important;
+  border-radius:2px;
+  font-weight:600;font-size:.82rem;
+  letter-spacing:.01em;
+  margin-left:.6rem;
+  border:1px solid var(--ink);
+  transition:all .25s var(--ease);
+}
+.nav-cta::after{
+  content:'→';font-size:.95rem;transition:transform .25s var(--ease);
+}
+.nav-cta:hover{background:var(--forest);border-color:var(--forest)}
+.nav-cta:hover::after{transform:translateX(3px)}
+.nav-cta .num{display:none!important}
+
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--ink)}
+.menu-toggle svg{width:24px;height:24px}
+
+.mobile-menu{position:fixed;top:0;right:0;width:88%;max-width:360px;height:100vh;background:var(--paper);z-index:300;padding:5rem 2rem 2rem;transform:translateX(100%);transition:transform .35s var(--ease-out);box-shadow:-20px 0 60px rgba(12,19,14,.15);overflow-y:auto;visibility:hidden;border-left:1px solid var(--rule)}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mobile-menu-overlay{position:fixed;inset:0;background:rgba(12,19,14,.45);z-index:250;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;backdrop-filter:blur(4px)}
+.mobile-menu-overlay.open{opacity:1;visibility:visible}
+.mobile-menu-close{position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--ink)}
+.mobile-menu a{display:flex;align-items:baseline;gap:.6rem;padding:1.1rem 0;font-size:1.08rem;font-weight:500;color:var(--ink);border-bottom:1px solid var(--rule);font-family:var(--font-display);letter-spacing:-0.015em}
+.mobile-menu a .num{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--brass);font-weight:500}
+.mobile-menu a:hover{color:var(--forest)}
+.mobile-menu .mobile-cta{
+  margin-top:1.75rem;background:var(--forest);color:#fff;text-align:center;
+  padding:1rem;border-radius:2px;font-weight:600;border:none;justify-content:center;
+  font-family:'Manrope',sans-serif;
+}
+
+/* ─────────── HERO ─────────── */
+.hero-wrap{position:relative;padding:8rem 2.5rem 0;overflow:hidden}
+.hero-wrap::before{
+  content:'';position:absolute;
+  top:-200px;right:-200px;
+  width:700px;height:700px;
+  background:radial-gradient(circle at center, rgba(21,69,53,.07), transparent 65%);
+  pointer-events:none;border-radius:50%;
+}
+.hero-wrap::after{
+  content:'';position:absolute;
+  bottom:-100px;left:-200px;
+  width:500px;height:500px;
+  background:radial-gradient(circle at center, rgba(160,117,53,.05), transparent 65%);
+  pointer-events:none;border-radius:50%;
+}
+
+.hero{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1.15fr 1fr;gap:5rem;
+  align-items:end;
+  min-height:calc(100vh - 88px);
+  padding-bottom:5rem;
+  position:relative;
+}
+
+.hero-meta{
+  position:absolute;top:0;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:2rem;border-bottom:1px solid var(--rule);
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-mute);font-weight:500;
+}
+.hero-meta-l{display:flex;gap:1.5rem;align-items:center}
+.hero-meta-l span:first-child{color:var(--forest)}
+.hero-meta-r{display:flex;align-items:center;gap:.5rem}
+.hero-meta-r .dot{width:7px;height:7px;border-radius:50%;background:#22a55a;box-shadow:0 0 0 3px rgba(34,165,90,.15);animation:liveDot 2.5s infinite}
+@keyframes liveDot{0%,100%{opacity:1}50%{opacity:.55}}
+
+.hero-content{padding-top:5rem}
+.hero h1{
+  font-size:clamp(2.4rem,5.2vw,4.8rem);
+  font-weight:500;
+  letter-spacing:-0.035em;
+  line-height:1.05;
+  margin-bottom:2rem;
+  color:var(--ink);
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--forest);
+  font-weight:500;
+  position:relative;
+}
+.hero h1 .amp{
+  font-style:normal;
+  color:var(--brass);
+  font-weight:400;
+  font-family:var(--font-display);
+  margin:0 .15em;
+}
+
+.hero-lede{
+  font-size:1.14rem;
+  color:var(--ink-soft);
+  max-width:540px;
+  margin-bottom:2.5rem;
+  font-weight:400;
+  line-height:1.65;
+}
+.hero-lede strong{font-weight:600;color:var(--ink)}
+
+.hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;margin-bottom:3rem}
+
+.btn-primary{
+  background:var(--ink);
+  color:var(--bone-light);
+  padding:1.05rem 1.85rem;
+  border-radius:2px;
+  font-weight:600;font-size:.92rem;
+  display:inline-flex;align-items:center;gap:.6rem;
+  border:1px solid var(--ink);
+  transition:all .28s var(--ease);
+  position:relative;overflow:hidden;
+  letter-spacing:.01em;
+}
+.btn-primary::before{
+  content:'';position:absolute;inset:0;
+  background:var(--forest);
+  transform:translateY(101%);
+  transition:transform .35s var(--ease-out);
+}
+.btn-primary span{position:relative;z-index:1}
+.btn-primary:hover::before{transform:translateY(0)}
+.btn-primary:hover{border-color:var(--forest);box-shadow:0 14px 32px -10px rgba(21,69,53,.4)}
+.btn-primary .arrow{position:relative;z-index:1;transition:transform .3s var(--ease)}
+.btn-primary:hover .arrow{transform:translateX(4px)}
+
+.btn-secondary{
+  background:transparent;color:var(--ink);
+  padding:1.05rem 1.7rem;border-radius:2px;
+  font-weight:500;font-size:.92rem;
+  display:inline-flex;align-items:center;gap:.55rem;
+  border:1px solid var(--rule-strong);
+  transition:all .25s var(--ease);
+}
+.btn-secondary:hover{
+  border-color:var(--forest);
+  color:var(--forest);
+  background:rgba(21,69,53,.04);
+}
+.btn-secondary .arrow{transition:transform .3s var(--ease)}
+.btn-secondary:hover .arrow{transform:translateX(3px)}
+
+.hero-trust{
+  display:flex;align-items:center;gap:1rem;
+  padding-top:2rem;border-top:1px solid var(--rule);
+  max-width:520px;
+}
+.hero-trust-icon{
+  display:flex;align-items:center;justify-content:center;
+  width:42px;height:42px;background:var(--sage-soft);
+  border:1px solid var(--rule);border-radius:2px;
+  flex-shrink:0;
+  color:var(--forest);
+}
+.hero-trust-text{font-size:.84rem;color:var(--ink-soft);line-height:1.55;font-weight:400}
+.hero-trust-text strong{font-weight:600;color:var(--ink)}
+
+/* Hero right column: editorial credentials card */
+.hero-right{padding-top:5rem}
+.cred-card{
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:0;
+  position:relative;
+  box-shadow:var(--shadow-2);
+}
+.cred-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--forest) 0%,var(--forest) 65%,var(--brass) 65%,var(--brass) 100%);
+}
+.cred-card-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.25rem 1.6rem;border-bottom:1px solid var(--rule);
+}
+.cred-card-head-l{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);font-weight:500}
+.cred-card-head-r{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--brass-deep);font-weight:500}
+
+.cred-stats{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}
+.cred-stat{padding:1.6rem;border-right:1px solid var(--rule);position:relative}
+.cred-stat:nth-child(2n){border-right:none}
+.cred-stat:nth-child(1),.cred-stat:nth-child(2){border-bottom:1px solid var(--rule)}
+.cred-stat .num{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:3rem;
+  line-height:.95;
+  color:var(--forest);
+  letter-spacing:-0.04em;
+  display:block;margin-bottom:.4rem;
+}
+.cred-stat .num .plus{color:var(--brass);font-weight:400}
+.cred-stat .lbl{font-size:.74rem;color:var(--ink-mute);line-height:1.4;font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+
+.cred-pills{padding:1.25rem 1.6rem;display:flex;flex-wrap:wrap;gap:.35rem}
+.pill{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.74rem;
+  padding:.32rem .7rem;
+  border-radius:100px;
+  background:var(--sage-soft);
+  color:var(--forest);
+  font-weight:500;
+  border:1px solid transparent;
+  transition:all .2s;
+}
+.pill:hover{border-color:var(--forest);background:transparent}
+.pill.brass{background:var(--brass-glow);color:var(--brass-deep)}
+.pill.brass:hover{border-color:var(--brass)}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+
+.cred-card-foot{
+  padding:1rem 1.6rem;background:var(--sage-soft);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--forest);font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+}
+.cred-card-foot::before{content:'◆';font-size:.7rem;color:var(--brass)}
+
+/* Scroll indicator */
+.scroll-indicator{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-mute);
+}
+.scroll-indicator .line{width:1px;height:32px;background:var(--rule-strong);position:relative;overflow:hidden}
+.scroll-indicator .line::after{
+  content:'';position:absolute;top:-50%;left:0;right:0;height:50%;
+  background:var(--forest);
+  animation:scrollDown 2s var(--ease) infinite;
+}
+@keyframes scrollDown{0%{transform:translateY(0)}100%{transform:translateY(300%)}}
+
+/* ─────────── MARQUEE / TRUST STRIP ─────────── */
+.trust-strip{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  background:var(--bone-light);
+  overflow:hidden;
+  padding:1.4rem 0;
+  position:relative;
+}
+.trust-strip::before,.trust-strip::after{
+  content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;
+}
+.trust-strip::before{left:0;background:linear-gradient(90deg,var(--bone-light),transparent)}
+.trust-strip::after{right:0;background:linear-gradient(-90deg,var(--bone-light),transparent)}
+
+.marquee{display:flex;gap:4rem;animation:marquee 38s linear infinite;width:max-content}
+.marquee-item{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:var(--font-display);
+  font-size:1rem;font-weight:500;
+  letter-spacing:-0.01em;
+  color:var(--ink-soft);white-space:nowrap;
+}
+.marquee-item::after{content:'/';color:var(--brass);font-weight:300;font-size:1.1rem;margin-left:4rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─────────── SECTIONS ─────────── */
+section{padding:7rem 2.5rem;position:relative}
+.container{max-width:1280px;margin:0 auto}
+.container-narrow{max-width:1080px;margin:0 auto}
+
+.section-head{
+  display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;
+  align-items:end;margin-bottom:4.5rem;
+  padding-bottom:2rem;border-bottom:1px solid var(--rule);
+}
+.section-head-l{display:flex;flex-direction:column;gap:1rem}
+.section-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.78rem;letter-spacing:.12em;
+  color:var(--brass-deep);font-weight:500;
+}
+.section-title{
+  font-size:clamp(1.85rem,3.8vw,3rem);
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:-0.035em;
+  color:var(--ink);
+  max-width:620px;
+}
+.section-title em{
+  font-style:normal;
+  color:var(--forest);
+  font-weight:500;
+}
+.section-sub{
+  font-size:1rem;color:var(--ink-soft);
+  font-weight:400;line-height:1.7;
+  max-width:560px;
+}
+
+/* ─────────── METHOD ─────────── */
+.method{background:var(--paper);position:relative;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.method::before{
+  content:'';position:absolute;
+  top:0;right:0;width:50%;height:100%;
+  background:linear-gradient(135deg,transparent 0%,rgba(21,69,53,.025) 100%);
+  pointer-events:none;
+}
+
+.method-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;
+  border:1px solid var(--rule);
+  border-radius:2px;
+  background:var(--paper);
+  overflow:hidden;
+  position:relative;
+}
+.method-step{
+  padding:2.2rem 1.6rem;
+  border-right:1px solid var(--rule);
+  position:relative;
+  transition:background .3s var(--ease);
+  cursor:default;
+  display:flex;flex-direction:column;
+  min-height:280px;
+}
+.method-step:last-child{border-right:none}
+.method-step:hover{background:var(--bone-light)}
+.method-step::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:2px;background:var(--forest);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease-out);
+}
+.method-step:hover::before{transform:scaleX(1)}
+
+.method-step-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.16em;
+  color:var(--ink-faint);font-weight:500;
+  margin-bottom:1.4rem;
+}
+.method-step-num strong{color:var(--brass-deep);font-weight:700}
+
+.method-step-icon{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--rule);
+  border-radius:2px;
+  background:var(--bone-light);
+  color:var(--forest);
+  margin-bottom:1.2rem;
+}
+.method-step h3{
+  font-size:1.15rem;
+  font-weight:500;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+  margin-bottom:.6rem;
+  line-height:1.2;
+}
+.method-step p{font-size:.86rem;color:var(--ink-mute);line-height:1.6;font-weight:400;flex:1}
+
+.method-cta{
+  margin-top:3rem;display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1.5rem;padding-top:2rem;border-top:1px solid var(--rule);
+}
+.method-cta-text{font-family:var(--font-body);font-size:1.02rem;color:var(--ink-soft);max-width:620px;line-height:1.6;font-weight:400}
+.method-cta-text::before{content:'— ';color:var(--brass);font-weight:500}
+
+/* ─────────── SERVICES ─────────── */
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  background:var(--paper);
+  overflow:hidden;
+}
+.service-card{
+  padding:2.4rem 2rem;
+  border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  position:relative;
+  cursor:default;
+  transition:background .35s var(--ease);
+  overflow:hidden;
+}
+.service-card:nth-child(3n){border-right:none}
+.service-card:nth-last-child(-n+3){border-bottom:none}
+.service-card::after{
+  content:'';position:absolute;
+  inset:auto 0 0 0;height:2px;
+  background:var(--forest);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease-out);
+}
+.service-card:hover::after{transform:scaleX(1)}
+.service-card:hover{background:var(--bone-light)}
+.service-card:hover .svc-num{color:var(--brass)}
+
+.svc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.75rem}
+.svc-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;color:var(--ink-faint);font-weight:500;
+  letter-spacing:.1em;transition:color .3s;
+}
+.svc-icon{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--sage-soft);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  color:var(--forest);
+  transition:all .3s var(--ease);
+}
+.service-card:hover .svc-icon{background:var(--forest);color:var(--bone-light);border-color:var(--forest)}
+.service-card h3{
+  font-size:1.28rem;
+  font-weight:500;
+  letter-spacing:-0.025em;
+  margin-bottom:.8rem;
+  line-height:1.2;
+  color:var(--ink);
+}
+.service-card p{font-size:.92rem;color:var(--ink-mute);line-height:1.65;font-weight:400}
+.service-card .more{
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--forest);
+  margin-top:1.5rem;display:inline-flex;align-items:center;gap:.5rem;font-weight:500;
+  opacity:.6;transition:opacity .3s,gap .3s;
+}
+.service-card:hover .more{opacity:1;gap:.8rem}
+
+/* ─────────── SECTORS ─────────── */
+.sectors{
+  background:var(--bone-light);
+  padding:4rem 2.5rem;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.sectors-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center;
+}
+.sectors-label{
+  font-family:var(--font-display);
+  font-size:1.4rem;font-weight:500;color:var(--ink);line-height:1.2;
+  letter-spacing:-0.03em;
+}
+.sectors-label em{font-style:normal;color:var(--forest);font-weight:500}
+.sectors-grid{display:flex;flex-wrap:wrap;gap:.55rem}
+.sector-tag{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:.65rem 1.05rem;
+  font-size:.85rem;font-weight:500;color:var(--ink-soft);
+  transition:all .25s var(--ease);
+  cursor:default;
+}
+.sector-tag:hover{
+  border-color:var(--forest);
+  color:var(--forest);
+  background:var(--sage-soft);
+  transform:translateY(-2px);
+}
+.sector-tag .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--brass);
+}
+.sector-tag:hover .dot{background:var(--forest)}
+
+.sectors-divider{
+  max-width:1280px;margin:2.5rem auto;
+  height:1px;background:var(--rule);
+  position:relative;
+}
+.sectors-divider::before{
+  content:'';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:6px;height:6px;border-radius:50%;background:var(--brass);
+}
+
+.sector-tag.seal{
+  border-color:rgba(160,117,53,.28);
+  background:var(--brass-glow);
+  color:var(--brass-deep);
+  font-family:var(--font-mono);
+  font-size:.74rem;font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:.55rem 1rem .55rem .8rem;
+}
+.sector-tag.seal:hover{
+  background:var(--brass);
+  border-color:var(--brass);
+  color:#fff;
+  transform:translateY(-2px);
+}
+.sector-tag.seal .seal-mark{
+  width:18px;height:18px;
+  border-radius:50%;
+  background:rgba(160,117,53,.18);
+  display:inline-flex;align-items:center;justify-content:center;
+  color:var(--brass-deep);
+  transition:all .25s var(--ease);
+}
+.sector-tag.seal .seal-mark svg{width:11px;height:11px;display:block}
+.sector-tag.seal:hover .seal-mark{background:rgba(255,255,255,.25);color:#fff}
+
+/* ─────────── ABOUT / TEAM ─────────── */
+.about{background:var(--paper)}
+
+.about-quote-block{
+  margin:0 0 5rem;padding:0;
+  display:grid;grid-template-columns:1fr 2.5fr;gap:3rem;align-items:start;
+}
+.about-quote-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-deep);font-weight:500;
+  padding-top:.5rem;
+  border-top:1px solid var(--brass);
+  display:inline-block;
+}
+.about-quote{
+  font-family:var(--font-display);
+  font-size:clamp(1.65rem,2.8vw,2.3rem);
+  font-weight:500;letter-spacing:-0.035em;
+  line-height:1.22;color:var(--ink);
+}
+.about-quote em{
+  font-style:normal;color:var(--forest);
+  font-weight:500;
+}
+.about-quote-text{
+  margin-top:1.5rem;font-size:1rem;color:var(--ink-soft);line-height:1.75;max-width:620px;
+}
+.about-quote-text strong{font-weight:600;color:var(--ink)}
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+
+.team-card{
+  background:var(--bone-light);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:0;
+  overflow:hidden;
+  position:relative;
+  display:flex;flex-direction:column;
+  transition:all .3s var(--ease);
+}
+.team-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-3);border-color:var(--forest)}
+.team-card::before{
+  content:'';position:absolute;top:0;left:0;
+  width:60px;height:2px;background:var(--forest);
+}
+.team-card-head{
+  padding:2rem 2rem 1.5rem;
+  display:flex;align-items:center;gap:1.25rem;
+  border-bottom:1px solid var(--rule);
+}
+.team-avatar{
+  width:72px;height:72px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--forest),var(--forest-deep));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);
+  font-weight:500;font-size:1.4rem;
+  letter-spacing:.02em;
+  color:var(--brass-glow);
+  flex-shrink:0;
+  border:1px solid var(--forest);
+  box-shadow:0 0 0 4px var(--bone-light), 0 0 0 5px var(--rule);
+}
+.team-card.brass .team-avatar{background:linear-gradient(135deg,var(--brass),var(--brass-deep));border-color:var(--brass-deep);color:var(--brass-glow)}
+
+.team-meta{flex:1;min-width:0}
+.team-name{
+  font-family:var(--font-display);
+  font-size:1.4rem;font-weight:500;letter-spacing:-0.03em;color:var(--ink);
+  line-height:1.15;margin-bottom:.25rem;
+}
+.team-role{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);font-weight:500}
+
+.team-bio{padding:1.5rem 2rem;font-size:.93rem;color:var(--ink-soft);line-height:1.7;font-weight:400;flex:1}
+.team-bio strong{font-weight:600;color:var(--ink)}
+
+.team-creds{
+  padding:1rem 2rem 1.75rem;
+  display:flex;flex-wrap:wrap;gap:.4rem;
+  border-top:1px solid var(--rule);
+  background:var(--paper);
+}
+.cred-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.32rem .6rem;
+  background:transparent;color:var(--ink-mute);font-weight:500;
+  border:1px solid var(--rule);
+  border-radius:2px;
+}
+.team-card:hover .cred-tag{border-color:var(--rule-strong);color:var(--ink-soft)}
+
+/* ─────────── DIFFERENCIALS — DARK SECTION ─────────── */
+.diff-section{
+  background:var(--ink);
+  color:#e7ddc8;
+  position:relative;
+  overflow:hidden;
+  border-top:1px solid #1a201c;
+}
+.diff-section::before{
+  content:'';position:absolute;top:0;left:0;width:60%;height:100%;
+  background:radial-gradient(circle at 20% 30%,rgba(160,117,53,.12),transparent 50%);
+  pointer-events:none;
+}
+.diff-section::after{
+  content:'';position:absolute;bottom:0;right:0;width:50%;height:80%;
+  background:radial-gradient(circle at 80% 80%,rgba(42,107,76,.15),transparent 55%);
+  pointer-events:none;
+}
+.diff-section .section-head{border-bottom-color:rgba(231,221,200,.15)}
+.diff-section .section-num{color:var(--brass-soft)}
+.diff-section .section-title{color:#f3ecd9}
+.diff-section .section-title em{color:var(--brass-soft);font-style:normal;font-weight:500}
+.diff-section .section-sub{color:rgba(231,221,200,.7)}
+
+.diff-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:0;
+  border:1px solid rgba(231,221,200,.12);
+  border-radius:2px;
+  overflow:hidden;
+}
+.diff-card{
+  padding:2.4rem 2rem;
+  border-right:1px solid rgba(231,221,200,.12);
+  border-bottom:1px solid rgba(231,221,200,.12);
+  position:relative;
+  transition:background .3s var(--ease);
+}
+.diff-card:nth-child(2n){border-right:none}
+.diff-card:nth-last-child(-n+2){border-bottom:none}
+.diff-card:hover{background:rgba(231,221,200,.025)}
+.diff-card::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:var(--brass);transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease-out);
+}
+.diff-card:hover::after{transform:scaleX(1)}
+
+.diff-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:1.5rem}
+.diff-num{
+  font-family:var(--font-display);
+  font-weight:500;font-size:2.8rem;line-height:1;
+  color:rgba(231,221,200,.18);
+  transition:color .35s;
+  letter-spacing:-0.05em;
+}
+.diff-card:hover .diff-num{color:var(--brass)}
+.diff-tag{
+  font-family:'JetBrains Mono',monospace;font-size:.66rem;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(231,221,200,.5);font-weight:500;
+  padding:.3rem .65rem;border:1px solid rgba(231,221,200,.15);border-radius:2px;
+  margin-top:.6rem;
+}
+.diff-card h3{
+  font-size:1.35rem;font-weight:500;line-height:1.2;
+  letter-spacing:-0.03em;color:#f3ecd9;
+  margin-bottom:.7rem;
+}
+.diff-card h3 em{font-style:normal;color:var(--brass-soft);font-weight:500}
+.diff-card p{font-size:.92rem;color:rgba(231,221,200,.7);line-height:1.65;font-weight:400}
+
+/* ─────────── TESTIMONIALS ─────────── */
+.testi-section{background:var(--bone);position:relative}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);border-radius:2px;background:var(--paper);overflow:hidden}
+.testi-card{
+  padding:2.4rem 2rem;
+  border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  position:relative;
+  transition:background .3s var(--ease);
+  display:flex;flex-direction:column;
+}
+.testi-card:nth-child(3n){border-right:none}
+.testi-card:nth-last-child(-n+3){border-bottom:none}
+.testi-card:hover{background:var(--bone-light)}
+
+.testi-mark{
+  font-family:Georgia,serif;
+  font-weight:400;
+  color:var(--brass);font-size:3rem;line-height:.7;
+  margin-bottom:.4rem;
+  opacity:.85;
+}
+.testi-stars{
+  color:var(--brass);
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  letter-spacing:.4em;
+  margin-bottom:1rem;
+}
+.testi-text{
+  font-family:var(--font-body);
+  font-size:.97rem;color:var(--ink-soft);line-height:1.65;
+  font-weight:400;margin-bottom:1.75rem;flex:1;
+  letter-spacing:-0.005em;
+}
+.testi-author{
+  display:flex;align-items:center;gap:.85rem;
+  padding-top:1.25rem;border-top:1px solid var(--rule);
+}
+.testi-author-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--sage-soft);
+  border:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);
+  font-weight:600;font-size:.82rem;color:var(--forest);
+  letter-spacing:.02em;
+  flex-shrink:0;
+}
+.testi-name{font-size:.88rem;font-weight:600;color:var(--ink);letter-spacing:-0.005em;line-height:1.2;margin-bottom:.15rem}
+.testi-role{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);font-weight:500}
+
+/* ─────────── FAQ ─────────── */
+.faq-section{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.faq-list{border-top:1px solid var(--rule)}
+.faq-item{
+  border-bottom:1px solid var(--rule);
+  transition:background .25s;
+}
+.faq-item:hover{background:var(--bone-light)}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;
+  padding:1.6rem 0;
+  display:flex;justify-content:space-between;align-items:center;gap:2rem;
+  font-family:var(--font-display);
+  font-size:1.18rem;font-weight:500;color:var(--ink);
+  text-align:left;letter-spacing:-0.025em;line-height:1.3;
+  transition:color .25s;
+}
+.faq-q:hover{color:var(--forest)}
+.faq-q-num{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--brass-deep);font-weight:500;letter-spacing:.1em}
+.faq-q-text{flex:1;padding:0 1.5rem}
+.faq-q-icon{
+  width:32px;height:32px;border:1px solid var(--rule-strong);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:all .35s var(--ease);
+}
+.faq-item.open .faq-q-icon{background:var(--forest);border-color:var(--forest);color:var(--bone-light);transform:rotate(45deg)}
+.faq-q-icon svg{width:14px;height:14px;transition:transform .25s}
+
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s var(--ease);
+}
+.faq-a-inner{
+  padding:0 4.5rem 1.75rem 4rem;
+  font-size:.96rem;color:var(--ink-soft);line-height:1.7;font-weight:400;max-width:780px;
+}
+.faq-a-inner strong{font-weight:600;color:var(--ink)}
+.faq-item.open .faq-a{max-height:400px}
+
+/* ─────────── CTA BANNER ─────────── */
+.cta-banner{
+  background:var(--forest-deep);
+  color:var(--bone-light);
+  padding:6rem 2.5rem;
+  position:relative;overflow:hidden;
+  border-top:1px solid var(--forest);
+}
+.cta-banner::before{
+  content:'';position:absolute;top:0;right:0;width:50%;height:100%;
+  background:radial-gradient(circle at 80% 50%,rgba(160,117,53,.2),transparent 60%);
+  pointer-events:none;
+}
+.cta-banner::after{
+  content:'';position:absolute;
+  top:50%;left:5%;transform:translateY(-50%);
+  width:160px;height:160px;
+  border:1px solid rgba(160,117,53,.18);border-radius:50%;
+  pointer-events:none;
+}
+.cta-inner{
+  max-width:1080px;margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;align-items:center;
+  position:relative;
+}
+.cta-banner h2{
+  font-size:clamp(1.85rem,3.4vw,2.8rem);
+  font-weight:500;letter-spacing:-0.035em;line-height:1.1;color:#f6efe0;
+}
+.cta-banner h2 em{font-style:normal;color:var(--brass-soft);font-weight:500}
+.cta-banner-sub{font-size:1rem;color:rgba(246,239,224,.7);margin-top:1rem;line-height:1.6;max-width:560px;font-weight:400}
+
+.cta-actions{display:flex;flex-direction:column;gap:.85rem;align-items:flex-end}
+.cta-banner-btn{
+  background:var(--brass-glow);color:var(--forest-deep);
+  padding:1.15rem 2rem;
+  border-radius:2px;
+  font-weight:700;font-size:.92rem;
+  display:inline-flex;align-items:center;gap:.6rem;
+  border:1px solid var(--brass-glow);
+  transition:all .3s var(--ease);
+  white-space:nowrap;
+  letter-spacing:.01em;
+}
+.cta-banner-btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px);box-shadow:0 20px 40px -10px rgba(160,117,53,.4)}
+.cta-banner-btn .arrow{transition:transform .25s}
+.cta-banner-btn:hover .arrow{transform:translateX(4px)}
+
+.cta-note{
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(246,239,224,.55);font-weight:500;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.cta-note .dot{width:6px;height:6px;border-radius:50%;background:#22a55a;box-shadow:0 0 8px rgba(34,165,90,.6)}
+
+/* ─────────── CONTACT ─────────── */
+.contact{background:var(--bone);position:relative;border-top:1px solid var(--rule)}
+
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.15fr;gap:5rem;align-items:start;
+}
+.contact-info-title{
+  font-size:clamp(1.85rem,3.2vw,2.5rem);font-weight:500;letter-spacing:-0.035em;line-height:1.1;
+  margin-bottom:1.25rem;
+}
+.contact-info-title em{color:var(--forest);font-style:normal;font-weight:500}
+.contact-info > p{color:var(--ink-soft);font-weight:400;line-height:1.7;margin-bottom:2.5rem;max-width:480px;font-size:1rem}
+
+.contact-item{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:.65rem;
+  text-decoration:none;color:var(--ink);
+  padding:1.1rem 1.35rem;
+  border-radius:2px;
+  background:var(--paper);
+  border:1px solid var(--rule);
+  transition:all .25s var(--ease);
+  position:relative;
+}
+.contact-item:hover{border-color:var(--forest);transform:translateX(4px);background:var(--bone-light)}
+.contact-item::after{
+  content:'→';margin-left:auto;color:var(--ink-faint);
+  font-size:1.1rem;transition:color .25s,transform .25s;
+}
+.contact-item:hover::after{color:var(--forest);transform:translateX(4px)}
+.contact-item-icon{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--sage-soft);
+  border:1px solid var(--rule);border-radius:2px;
+  color:var(--forest);
+  flex-shrink:0;
+}
+.contact-item:hover .contact-item-icon{background:var(--forest);color:var(--bone-light);border-color:var(--forest)}
+.contact-item-text{font-size:.94rem;font-weight:600;letter-spacing:-0.005em;line-height:1.2;margin-bottom:.2rem}
+.contact-item-sub{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--ink-mute);letter-spacing:.04em;font-weight:500}
+
+.contact-coverage{
+  margin-top:2rem;padding:1.5rem 1.5rem;
+  background:var(--sage-soft);border-radius:2px;
+  border-left:3px solid var(--forest);
+}
+.contact-coverage-label{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-deep);font-weight:500;margin-bottom:.5rem;display:block}
+.contact-coverage p{font-size:.92rem;color:var(--ink-soft);line-height:1.6;font-weight:400}
+.contact-coverage strong{color:var(--ink);font-weight:600}
+
+.contact-form-wrapper{
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:2.5rem;
+  position:relative;
+  box-shadow:var(--shadow-2);
+}
+.contact-form-wrapper::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--forest) 60%,var(--brass) 60%);
+}
+.contact-form-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding-bottom:1.5rem;margin-bottom:1.75rem;border-bottom:1px solid var(--rule);
+}
+.contact-form-head h3{
+  font-size:1.4rem;font-weight:500;letter-spacing:-0.03em;
+}
+.contact-form-meta{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-deep);font-weight:500}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{margin-bottom:1rem}
+.form-group label{
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.66rem;font-weight:500;
+  color:var(--ink-mute);margin-bottom:.5rem;
+  text-transform:uppercase;letter-spacing:.1em;
+}
+.form-group label .req{color:var(--brass-deep);font-family:var(--font-mono);font-weight:500;letter-spacing:.06em;text-transform:lowercase}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:.9rem 1rem;
+  border:1px solid var(--rule);
+  border-radius:2px;
+  font-family:'Manrope',sans-serif;
+  font-size:.94rem;
+  background:var(--bone-light);color:var(--ink);
+  outline:none;
+  transition:all .2s;
+  font-weight:400;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--ink-faint);font-weight:300}
+.form-group input:hover,.form-group textarea:hover,.form-group select:hover{border-color:var(--rule-strong)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  border-color:var(--forest);background:var(--paper);
+  box-shadow:0 0 0 3px rgba(21,69,53,.08);
+}
+.form-group textarea{height:130px;resize:vertical;min-height:100px;font-family:'Manrope',sans-serif;line-height:1.6}
+
+.form-submit{
+  width:100%;
+  background:var(--ink);color:var(--bone-light);
+  border:1px solid var(--ink);
+  padding:1.1rem;
+  border-radius:2px;
+  font-family:'Manrope',sans-serif;font-size:.95rem;font-weight:600;
+  letter-spacing:.01em;cursor:pointer;margin-top:.75rem;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  transition:all .28s var(--ease);
+  position:relative;overflow:hidden;
+}
+.form-submit::before{
+  content:'';position:absolute;inset:0;background:var(--forest);
+  transform:translateY(101%);transition:transform .35s var(--ease-out);
+}
+.form-submit span,.form-submit .arrow{position:relative;z-index:1}
+.form-submit:hover:not(:disabled)::before{transform:translateY(0)}
+.form-submit:hover:not(:disabled){border-color:var(--forest)}
+.form-submit:hover:not(:disabled) .arrow{transform:translateX(4px)}
+.form-submit .arrow{transition:transform .3s var(--ease)}
+.form-submit:disabled{opacity:.65;cursor:not-allowed}
+
+.form-disclaimer{
+  margin-top:1rem;font-family:'JetBrains Mono',monospace;
+  font-size:.65rem;letter-spacing:.05em;color:var(--ink-mute);
+  text-align:center;line-height:1.5;
+}
+.form-success,.form-error{
+  margin-top:1rem;padding:1rem 1.25rem;border-radius:2px;font-size:.88rem;font-weight:500;
+  display:none;align-items:center;gap:.6rem;
+}
+.form-success{background:var(--sage-soft);color:var(--forest);border-left:3px solid var(--forest)}
+.form-error{background:#fde8e8;color:#9b2c2c;border-left:3px solid #9b2c2c}
+
+/* ─────────── FOOTER ─────────── */
+footer{
+  background:var(--ink);
+  color:rgba(231,221,200,.55);
+  padding:5rem 2.5rem 2rem;
+  position:relative;
+}
+.footer-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:3rem;
+  padding-bottom:3rem;border-bottom:1px solid rgba(231,221,200,.1);
+}
+
+.footer-brand-wrap{display:flex;flex-direction:column}
+.footer-brand{display:flex;align-items:baseline;gap:.6rem;line-height:1;margin-bottom:1rem;text-decoration:none}
+.footer-brand-mark{
+  font-family:var(--font-display);
+  font-weight:600;font-size:1.4rem;letter-spacing:.14em;
+  text-transform:uppercase;color:#f3ecd9;
+}
+.footer-brand-mark em{font-style:normal;color:var(--brass-soft);font-weight:600}
+.footer-brand-tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(231,221,200,.4);font-weight:500;padding-bottom:.2rem}
+
+.footer-tagline{
+  font-family:var(--font-body);
+  font-size:.98rem;color:rgba(231,221,200,.65);
+  margin-bottom:1.5rem;max-width:340px;line-height:1.55;letter-spacing:-0.005em;font-weight:400;
+}
+
+.footer-meta{
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  letter-spacing:.1em;color:rgba(231,221,200,.45);font-weight:500;
+  line-height:1.7;
+}
+.footer-meta div{margin-bottom:.3rem}
+
+.footer-col h4{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;font-weight:500;color:#f3ecd9;
+  text-transform:uppercase;letter-spacing:.16em;margin-bottom:1.25rem;
+  padding-bottom:.75rem;border-bottom:1px solid rgba(231,221,200,.1);
+}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:.7rem}
+.footer-col a{color:rgba(231,221,200,.55);font-size:.88rem;display:inline-flex;align-items:center;gap:.4rem;font-weight:400}
+.footer-col a:hover{color:var(--brass-soft)}
+.footer-col a::before{content:'';width:0;height:1px;background:var(--brass-soft);transition:width .25s}
+.footer-col a:hover::before{width:14px}
+
+.footer-newsletter p{font-size:.84rem;color:rgba(231,221,200,.55);margin-bottom:1rem;line-height:1.55}
+.footer-newsletter form{display:flex;gap:0;border:1px solid rgba(231,221,200,.15);border-radius:2px;overflow:hidden;background:rgba(231,221,200,.04)}
+.footer-newsletter input{flex:1;background:transparent;border:none;color:var(--bone-light);padding:.75rem 1rem;font-family:'Manrope',sans-serif;font-size:.85rem;outline:none}
+.footer-newsletter input::placeholder{color:rgba(231,221,200,.4)}
+.footer-newsletter button{background:var(--brass);color:var(--ink);border:none;padding:.75rem 1rem;cursor:pointer;font-weight:700;transition:background .25s}
+.footer-newsletter button:hover{background:var(--brass-soft)}
+
+.footer-bottom{
+  max-width:1280px;margin:0 auto;padding-top:1.75rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+}
+.footer-copy{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.08em;color:rgba(231,221,200,.35);font-weight:500}
+.footer-social{display:flex;gap:.5rem}
+.footer-social a{
+  width:36px;height:36px;border-radius:2px;
+  background:rgba(231,221,200,.04);
+  border:1px solid rgba(231,221,200,.1);
+  display:flex;align-items:center;justify-content:center;color:rgba(231,221,200,.65);
+}
+.footer-social a:hover{background:var(--brass);color:var(--ink);border-color:var(--brass);transform:translateY(-2px)}
+.footer-social svg{width:16px;height:16px}
+
+/* ─────────── FLOATING WHATSAPP ─────────── */
+.fab-whatsapp{
+  position:fixed;bottom:1.75rem;right:1.75rem;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 32px -8px rgba(37,211,102,.5), 0 4px 12px rgba(37,211,102,.2);
+  z-index:99;transition:transform .25s var(--ease),box-shadow .25s;
+}
+.fab-whatsapp:hover{transform:scale(1.08);box-shadow:0 16px 40px -8px rgba(37,211,102,.6)}
+.fab-whatsapp svg{width:28px;height:28px;fill:#fff}
+.fab-whatsapp::before{
+  content:'';position:absolute;inset:0;border-radius:50%;
+  background:#25D366;animation:fabPulse 2.2s infinite;z-index:-1;opacity:0;
+}
+@keyframes fabPulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.45);opacity:0}}
+
+/* ─────────── ANIMATIONS ─────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;animation:fadeUp .8s var(--ease-out) forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.34s}.d4{animation-delay:.46s}.d5{animation-delay:.58s}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .marquee{animation:none}
+}
+
+/* ─────────── RESPONSIVE ─────────── */
+@media(max-width:1180px){
+  .hero{grid-template-columns:1fr;gap:3rem;align-items:start;padding-bottom:4rem}
+  .hero-meta{position:relative;margin-bottom:2.5rem;padding-bottom:1.5rem}
+  .hero-content{padding-top:0}
+  .hero-right{padding-top:0;max-width:520px}
+  .scroll-indicator{display:none}
+  .method-grid{grid-template-columns:repeat(3,1fr)}
+  .method-step:nth-child(3n){border-right:none}
+  .method-step:nth-child(-n+3){border-bottom:1px solid var(--rule)}
+}
+
+@media(max-width:1024px){
+  nav{padding:.9rem 1.75rem}
+  .nav-links{gap:.1rem}
+  .nav-links > li > a{font-size:.78rem;padding:.5rem .65rem}
+  .nav-links > li > a .num{display:none}
+  .hero-wrap{padding:7rem 1.75rem 0}
+  section{padding:5rem 1.75rem}
+  .section-head{grid-template-columns:1fr;gap:2rem}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .service-card:nth-child(3n){border-right:1px solid var(--rule)}
+  .service-card:nth-child(2n){border-right:none}
+  .service-card:nth-last-child(-n+3){border-bottom:1px solid var(--rule)}
+  .service-card:nth-last-child(-n+2){border-bottom:none}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-card:nth-child(3n){border-right:1px solid var(--rule)}
+  .testi-card:nth-child(2n){border-right:none}
+  .testi-card:nth-last-child(-n+3){border-bottom:1px solid var(--rule)}
+  .testi-card:nth-last-child(-n+2){border-bottom:none}
+  .contact-grid{gap:3rem}
+  .footer-inner{grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem}
+  .footer-newsletter{grid-column:1/-1;border-top:1px solid rgba(231,221,200,.1);padding-top:2rem;margin-top:1rem}
+  .cta-inner{grid-template-columns:1fr;gap:2.5rem}
+  .cta-actions{align-items:flex-start}
+}
+
+@media(max-width:820px){
+  nav{padding:.85rem 1.1rem}
+  nav.scrolled{padding:.7rem 1.1rem}
+  .nav-brand-mark{font-size:1.4rem}
+  .nav-brand-tag{font-size:.58rem}
+  .nav-links{display:none}
+  .menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px}
+  .scroll-progress{height:2px}
+
+  .hero-wrap{padding:6rem 1.1rem 0}
+  .hero{gap:2rem;padding-bottom:3rem;min-height:auto}
+  .hero-meta{font-size:.62rem;flex-wrap:wrap;gap:.75rem}
+  .hero-meta-l{flex-wrap:wrap;gap:.75rem}
+  .hero h1{font-size:2.4rem;margin-bottom:1.25rem;line-height:1.06}
+  .hero-lede{font-size:1rem;margin-bottom:1.75rem;line-height:1.6}
+  .hero-actions{flex-direction:column;width:100%;gap:.6rem;align-items:stretch;margin-bottom:2rem}
+  .hero-actions > a{width:100%;justify-content:center;padding:.95rem 1rem}
+  .hero-trust{padding-top:1.5rem;gap:.85rem}
+  .hero-trust-icon{width:38px;height:38px}
+  .hero-trust-text{font-size:.78rem;line-height:1.45}
+
+  .cred-card-head{padding:.95rem 1.15rem}
+  .cred-stat{padding:1.15rem 1.15rem}
+  .cred-stat .num{font-size:2.4rem}
+  .cred-stat .lbl{font-size:.66rem}
+  .cred-pills{padding:1rem 1.15rem;gap:.3rem}
+  .pill{font-size:.7rem;padding:.28rem .6rem}
+  .cred-card-foot{padding:.75rem 1.15rem;font-size:.62rem}
+
+  .trust-strip{padding:1rem 0}
+  .marquee-item{font-size:.92rem;gap:.5rem}
+  .marquee{gap:2.5rem;animation-duration:24s}
+  .marquee-item::after{margin-left:2.5rem}
+
+  section{padding:3.5rem 1.1rem}
+  .section-head{margin-bottom:2.5rem;padding-bottom:1.25rem;gap:1.25rem}
+  .section-num{font-size:.7rem}
+  .section-title{font-size:1.85rem;line-height:1.1}
+  .section-sub{font-size:.95rem}
+
+  .method-grid{grid-template-columns:1fr;border-radius:2px}
+  .method-step{border-right:none;border-bottom:1px solid var(--rule);min-height:auto;padding:1.6rem 1.4rem}
+  .method-step:last-child{border-bottom:none}
+  .method-step::before{display:none}
+  .method-cta{flex-direction:column;align-items:flex-start;text-align:left;gap:1rem}
+  .method-cta-text{font-size:1rem}
+
+  .services-grid{grid-template-columns:1fr}
+  .service-card{border-right:none!important;padding:1.75rem 1.4rem}
+  .service-card:not(:last-child){border-bottom:1px solid var(--rule)}
+  .service-card h3{font-size:1.2rem}
+
+  .sectors{padding:2.5rem 1.1rem}
+  .sectors-inner{grid-template-columns:1fr;gap:1.5rem}
+  .sectors-label{font-size:1.15rem}
+  .sector-tag{font-size:.78rem;padding:.5rem .85rem}
+
+  .about-quote-block{grid-template-columns:1fr;gap:1.25rem;margin-bottom:2.5rem}
+  .about-quote{font-size:1.55rem}
+  .about-quote-text{font-size:.95rem}
+  .team-grid{grid-template-columns:1fr;gap:1rem}
+  .team-card-head{padding:1.5rem 1.4rem 1.25rem;gap:1rem}
+  .team-avatar{width:60px;height:60px;font-size:1.3rem}
+  .team-name{font-size:1.25rem}
+  .team-role{font-size:.66rem}
+  .team-bio{padding:1.25rem 1.4rem;font-size:.9rem}
+  .team-creds{padding:.85rem 1.4rem 1.5rem}
+  .cred-tag{font-size:.62rem;padding:.28rem .55rem}
+
+  .diff-grid{grid-template-columns:1fr}
+  .diff-card{border-right:none!important;padding:1.75rem 1.4rem}
+  .diff-card:not(:last-child){border-bottom:1px solid rgba(231,221,200,.12)}
+  .diff-num{font-size:2.4rem}
+  .diff-card h3{font-size:1.2rem}
+
+  .testi-grid{grid-template-columns:1fr}
+  .testi-card{border-right:none!important;padding:1.75rem 1.4rem}
+  .testi-card:not(:last-child){border-bottom:1px solid var(--rule)}
+  .testi-text{font-size:.97rem}
+
+  .faq-q{font-size:1.05rem;padding:1.25rem 0;gap:1rem}
+  .faq-q-num{font-size:.7rem}
+  .faq-q-text{padding:0 .85rem}
+  .faq-q-icon{width:28px;height:28px}
+  .faq-q-icon svg{width:12px;height:12px}
+  .faq-a-inner{padding:0 1.5rem 1.5rem 2.85rem;font-size:.9rem}
+
+  .cta-banner{padding:3.5rem 1.1rem}
+  .cta-banner h2{font-size:1.85rem}
+  .cta-banner-sub{font-size:.95rem}
+  .cta-actions{width:100%;align-items:stretch}
+  .cta-banner-btn{justify-content:center;width:100%}
+
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .contact-info-title{font-size:1.75rem}
+  .contact-info > p{font-size:.95rem;margin-bottom:1.75rem}
+  .contact-item{padding:.95rem 1.05rem;gap:.85rem}
+  .contact-item-icon{width:40px;height:40px}
+  .contact-form-wrapper{padding:1.5rem 1.4rem}
+  .contact-form-head{flex-direction:column;align-items:flex-start;gap:.4rem;padding-bottom:1.1rem;margin-bottom:1.25rem}
+  .contact-form-head h3{font-size:1.3rem}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .form-group label{font-size:.62rem}
+  .form-group input,.form-group textarea{font-size:16px;padding:.85rem .95rem}
+  .form-group textarea{height:110px}
+
+  footer{padding:3rem 1.1rem 5.5rem}
+  .footer-inner{grid-template-columns:1fr;gap:2rem;padding-bottom:2rem}
+  .footer-brand-mark{font-size:1.95rem}
+  .footer-tagline{font-size:.97rem}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:1rem}
+
+  .fab-whatsapp{bottom:1rem;right:1rem;width:52px;height:52px}
+  .fab-whatsapp svg{width:24px;height:24px}
+}
+
+@media(max-width:380px){
+  nav{padding:.7rem .9rem}
+  .nav-brand-mark{font-size:1.25rem}
+  .nav-brand-tag{font-size:.55rem}
+  .hero-wrap{padding:5.5rem .9rem 0}
+  .hero h1{font-size:2.05rem}
+  .hero-lede{font-size:.94rem}
+  section{padding:3rem .9rem}
+  .section-title{font-size:1.6rem}
+  .cred-stat .num{font-size:2.1rem}
+  .cred-stat .lbl{font-size:.62rem}
+  .footer-brand-mark{font-size:1.75rem}
+  .cta-banner{padding:3rem .9rem}
+  .cta-banner h2{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" style="width: 46.2366%;"></div>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav id="navbar" class="scrolled">
+  <a class="nav-brand" href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#" aria-label="Mikro Adventures Soluções — Início">
+    <span class="nav-brand-mark">Mikro <em>Adventures</em></span>
+    <span class="nav-brand-tag">Soluções</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#metodo" class=""><span class="num">01</span>Método</a></li>
+    <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#servicos" class=""><span class="num">02</span>Serviços</a></li>
+    <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#setores" class=""><span class="num">03</span>Setores</a></li>
+    <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#equipe" class="active"><span class="num">04</span>Equipe</a></li>
+    <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#depoimentos"><span class="num">05</span>Casos</a></li>
+    <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato" class="nav-cta">Iniciar projeto</a></li>
+  </ul>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+  </button>
+</nav>
+
+<div class="mobile-menu-overlay" id="menuOverlay"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#metodo"><span class="num">01</span>Método</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#servicos"><span class="num">02</span>Serviços</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#setores"><span class="num">03</span>Setores</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#equipe"><span class="num">04</span>Equipe</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#depoimentos"><span class="num">05</span>Casos</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#faq"><span class="num">06</span>FAQ</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato"><span class="num">07</span>Contato</a>
+  <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato" class="mobile-cta">Iniciar projeto →</a>
+</aside>
+
+<main id="main">
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-meta">
+      <div class="hero-meta-l">
+        <span>Mikro Adventures</span>
+        <span>São Paulo · Brasil</span>
+        <span>Consultoria técnica &amp; estratégica</span>
+      </div>
+      <div class="hero-meta-r">
+        <span class="dot"></span>
+        <span>Aceitando novos projetos · Q2/2026</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="eyebrow fade-up">Consultoria técnica &amp; estratégica em alimentos e bebidas</div>
+      <h1 class="fade-up d1">Do conceito à <em>escala industrial</em>,<br>com critério em cada etapa.</h1>
+      <p class="hero-lede fade-up d2"><strong>Mais de uma década de experiência aplicada</strong> apoiando startups e indústrias dos setores de alimentos, bebidas, suplementos, clean label e agroindústria — unindo ciência dos alimentos, gestão de processos e visão estratégica de mercado.</p>
+      <div class="hero-actions fade-up d3">
+        <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato" class="btn-primary"><span>Solicitar diagnóstico</span> <span class="arrow">→</span></a>
+        <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#metodo" class="btn-secondary">Conhecer o método <span class="arrow">↓</span></a>
+      </div>
+      <div class="hero-trust fade-up d4">
+        <div class="hero-trust-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"></path><path d="M9 12l2 2 4-4"></path></svg>
+        </div>
+        <div class="hero-trust-text"><strong>+100 projetos entregues</strong> em todas as regiões do Brasil e em mercados internacionais · Sociedade com origem em indústria pioneira no clean label brasileiro.</div>
+      </div>
+    </div>
+
+    <div class="hero-right fade-up d3">
+      <div class="cred-card">
+        <div class="cred-card-head">
+          <span class="cred-card-head-l">Trajetória</span>
+          <span class="cred-card-head-r">Atualizado · 2026</span>
+        </div>
+        <div class="cred-stats">
+          <div class="cred-stat">
+            <span class="num">10<span class="plus">+</span></span>
+            <span class="lbl">Anos de experiência aplicada</span>
+          </div>
+          <div class="cred-stat">
+            <span class="num">100<span class="plus">+</span></span>
+            <span class="lbl">Clientes atendidos</span>
+          </div>
+          <div class="cred-stat">
+            <span class="num">5</span>
+            <span class="lbl">Regiões do Brasil</span>
+          </div>
+          <div class="cred-stat">
+            <span class="num">∞</span>
+            <span class="lbl">Atuação internacional</span>
+          </div>
+        </div>
+        <div class="cred-pills">
+          <span class="pill"><span class="dot"></span>Alimentos</span>
+          <span class="pill"><span class="dot"></span>Bebidas</span>
+          <span class="pill"><span class="dot"></span>Suplementos</span>
+          <span class="pill"><span class="dot"></span>Clean Label</span>
+          <span class="pill brass"><span class="dot"></span>Origem pioneira</span>
+        </div>
+        <div class="cred-card-foot">
+          Especialistas em produto, processo &amp; escala
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Role para descobrir</span>
+      <div class="line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ MARQUEE ═══════════════════ -->
+<div class="trust-strip" aria-hidden="true">
+  <div class="marquee">
+    <span class="marquee-item">Ciência aplicada</span>
+    <span class="marquee-item">Rigor técnico</span>
+    <span class="marquee-item">Vivência de indústria</span>
+    <span class="marquee-item">Inovação sensorial</span>
+    <span class="marquee-item">Visão estratégica</span>
+    <span class="marquee-item">Escalonamento responsável</span>
+    <span class="marquee-item">Ciência aplicada</span>
+    <span class="marquee-item">Rigor técnico</span>
+    <span class="marquee-item">Vivência de indústria</span>
+    <span class="marquee-item">Inovação sensorial</span>
+    <span class="marquee-item">Visão estratégica</span>
+    <span class="marquee-item">Escalonamento responsável</span>
+  </div>
+</div>
+
+<!-- ═══════════════════ MÉTODO ═══════════════════ -->
+<section id="metodo" class="method">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="section-num">01 · Método</span>
+        <h2 class="section-title">Um framework <em>linear</em>, replicável e auditável</h2>
+      </div>
+      <p class="section-sub">Mais de uma década refinando uma metodologia que conecta laboratório, planta e mercado. Cinco etapas com entregáveis claros, cronograma definido e responsabilidades compartilhadas.</p>
+    </div>
+
+    <div class="method-grid">
+      <div class="method-step" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="method-step-num"><strong>01</strong> · Etapa</div>
+        <div class="method-step-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        </div>
+        <h3>Diagnóstico técnico</h3>
+        <p>Imersão na operação, mapeamento de processos, análise de gaps técnicos e regulatórios. Entrega de um plano de ação priorizado.</p>
+      </div>
+      <div class="method-step" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="method-step-num"><strong>02</strong> · Etapa</div>
+        <div class="method-step-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-10V2"></path><line x1="9" y1="2" x2="15" y2="2"></line></svg>
+        </div>
+        <h3>P&amp;D e formulação</h3>
+        <p>Desenvolvimento de produto em bancada, ajuste sensorial, estudos de estabilidade e validação de matérias-primas.</p>
+      </div>
+      <div class="method-step" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="method-step-num"><strong>03</strong> · Etapa</div>
+        <div class="method-step-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V9l9-7 9 7v12"></path><path d="M9 21v-6h6v6"></path></svg>
+        </div>
+        <h3>Piloto e escalonamento</h3>
+        <p>Transição do bench para a planta industrial com controle de variáveis críticas, otimização de rendimento e custo.</p>
+      </div>
+      <div class="method-step" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="method-step-num"><strong>04</strong> · Etapa</div>
+        <div class="method-step-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+        </div>
+        <h3>Regulatório e qualidade</h3>
+        <p>Adequação ANVISA, rotulagem, certificações (SIF, SISP, SISBI) e implantação de programas de qualidade e segurança.</p>
+      </div>
+      <div class="method-step" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="method-step-num"><strong>05</strong> · Etapa</div>
+        <div class="method-step-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 19-7-7 7-7"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <h3>Lançamento e go-to-market</h3>
+        <p>Posicionamento, identidade de produto e estratégia comercial. Acompanhamento pós-lançamento e ciclos de melhoria.</p>
+      </div>
+    </div>
+
+    <div class="method-cta">
+      <p class="method-cta-text">Cada etapa é independente — você pode contratar somente o que falta, ou todo o ciclo. O método se adapta ao estágio da sua operação.</p>
+      <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato" class="btn-secondary">Discutir meu projeto <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SERVIÇOS ═══════════════════ -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="section-num">02 · Serviços</span>
+        <h2 class="section-title">Soluções para cada <em>frente</em> do seu negócio</h2>
+      </div>
+      <p class="section-sub">Do P&amp;D ao posicionamento de mercado — consultoria sob medida em todos os segmentos de alimentos e bebidas, com a profundidade de quem já viveu o negócio.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="svc-head">
+          <span class="svc-num">/ 01</span>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-10V2"></path><line x1="9" y1="2" x2="15" y2="2"></line><line x1="8" y1="14" x2="16" y2="14"></line></svg>
+          </div>
+        </div>
+        <h3>Consultoria técnica especializada</h3>
+        <p>Diagnóstico, ajuste de processos e suporte técnico para indústrias de bebidas, alimentos funcionais, suplementos e produtos clean label — com foco em qualidade e eficiência.</p>
+        <span class="more">Ver detalhes →</span>
+      </div>
+
+      <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="svc-head">
+          <span class="svc-num">/ 02</span>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h-4a2 2 0 0 0-2 2v3l-4 7a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-4-7V6a2 2 0 0 0-2-2z"></path><line x1="12" y1="2" x2="12" y2="4"></line></svg>
+          </div>
+        </div>
+        <h3>Desenvolvimento de produtos (P&amp;D)</h3>
+        <p>Formulação de novos produtos — de RTDs a energéticos, suplementos e alimentos funcionais — combinando ciência, inovação sensorial e viabilidade industrial.</p>
+        <span class="more">Ver detalhes →</span>
+      </div>
+
+      <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="svc-head">
+          <span class="svc-num">/ 03</span>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 20h20"></path><path d="M5 20V8.5a1 1 0 0 1 .5-.87L12 4l6.5 3.63a1 1 0 0 1 .5.87V20"></path><path d="M10 20v-6h4v6"></path></svg>
+          </div>
+        </div>
+        <h3>Escalonamento industrial</h3>
+        <p>Suporte técnico na transição do artesanal ou laboratorial para a escala industrial, com foco em eficiência operacional, custo e manutenção da qualidade.</p>
+        <span class="more">Ver detalhes →</span>
+      </div>
+
+      <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="svc-head">
+          <span class="svc-num">/ 04</span>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1"></rect><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="13" y2="16"></line></svg>
+          </div>
+        </div>
+        <h3>Regulatório e certificações</h3>
+        <p>Orientação sobre legislação sanitária, rotulagem, ANVISA e obtenção de selos de inspeção (SIF, SISP, SISBI) para indústrias de alimentos, bebidas e agroindústrias.</p>
+        <span class="more">Ver detalhes →</span>
+      </div>
+
+      <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="svc-head">
+          <span class="svc-num">/ 05</span>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+        </div>
+        <h3>Treinamentos e capacitação</h3>
+        <p>Programas de capacitação técnica para equipes de produção e gestão, elevando o padrão de qualidade e a competência operacional da sua empresa.</p>
+        <span class="more">Ver detalhes →</span>
+      </div>
+
+      <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="svc-head">
+          <span class="svc-num">/ 06</span>
+          <div class="svc-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path></svg>
+          </div>
+        </div>
+        <h3>Inovação e lançamento de marcas</h3>
+        <p>Estratégia de go-to-market, posicionamento e identidade de produto para novas marcas nos segmentos de bebidas saudáveis, alimentos funcionais e clean label.</p>
+        <span class="more">Ver detalhes →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SETORES ═══════════════════ -->
+<div class="sectors" id="setores">
+  <div class="sectors-inner">
+    <h3 class="sectors-label"><em>Setores</em> em que atuamos com profundidade</h3>
+    <div class="sectors-grid">
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Bebidas Funcionais</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Kombucha &amp; Fermentados</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Clean Label</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Suplementos Alimentares</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Agroindústria</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Alimentos Processados</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Apicultura &amp; Mel</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>RTD &amp; Bebidas Prontas</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Energéticos</span>
+      <span class="sector-tag" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="dot"></span>Probióticos</span>
+    </div>
+  </div>
+
+  <div class="sectors-divider"></div>
+
+  <div class="sectors-inner">
+    <h3 class="sectors-label"><em>Selos de inspeção</em> em que damos suporte</h3>
+    <div class="sectors-grid">
+      <span class="sector-tag seal" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="seal-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>SIF · Inspeção Federal</span>
+      <span class="sector-tag seal" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="seal-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>SISP · Inspeção Estadual</span>
+      <span class="sector-tag seal" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="seal-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>SISBI</span>
+      <span class="sector-tag seal" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="seal-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>ANVISA · Registro de alimentos</span>
+      <span class="sector-tag seal" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="seal-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>SIM · Inspeção Municipal</span>
+      <span class="sector-tag seal" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);"><span class="seal-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Orgânico Brasil</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ EQUIPE ═══════════════════ -->
+<section id="equipe" class="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="section-num">04 · Quem somos</span>
+        <h2 class="section-title">A equipe por trás da <em>Mikro Adventures</em></h2>
+      </div>
+      <p class="section-sub">Especialistas que combinam vivência real de chão de fábrica com rigor científico e visão estratégica de mercado.</p>
+    </div>
+
+    <div class="about-quote-block" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+      <span class="about-quote-label">Manifesto</span>
+      <div>
+        <p class="about-quote">"Do conceito à escala, <em>com critério</em>" — nascida a partir da operação de uma indústria pioneira no segmento clean label brasileiro, levamos ao mercado o nível de excelência técnica que só anos de chão de fábrica produzem.</p>
+        <p class="about-quote-text">São <strong>5 anos como consultoria</strong> somados a mais de uma década de vivência industrial dos sócios — aplicados em projetos de alimentos, bebidas, suplementos e agroindústria. Nossa abordagem une <strong>ciência dos alimentos, microbiologia, gestão de processos e visão de mercado</strong>, tornando cada projeto uma jornada técnica e estratégica com critério em cada etapa.</p>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="team-card-head">
+          <div class="team-avatar">KG</div>
+          <div class="team-meta">
+            <div class="team-name">Kim Guerra</div>
+            <div class="team-role">Sócio Fundador · Diretor de P&amp;D</div>
+          </div>
+        </div>
+        <p class="team-bio">Tecnólogo em Alimentos. Como fundador de uma <strong>indústria pioneira no segmento clean label brasileiro</strong>, traz mais de 5 anos de vivência real de chão de fábrica somados a 5 anos liderando projetos de consultoria em alimentos, bebidas, suplementos e agroindústria. Já apoiou mais de 100 clientes em todas as regiões do Brasil e no exterior.</p>
+        <div class="team-creds">
+          <span class="cred-tag">Tecnólogo em Alimentos</span>
+          <span class="cred-tag">Bebidas não alcoólicas</span>
+          <span class="cred-tag">RTD's</span>
+          <span class="cred-tag">Responsabilidade técnica</span>
+          <span class="cred-tag">P&amp;D de Bebidas</span>
+          <span class="cred-tag">Kombucha &amp; Fermentados</span>
+          <span class="cred-tag">Escalonamento Industrial</span>
+        </div>
+      </div>
+
+      <div class="team-card brass" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="team-card-head">
+          <div class="team-avatar">MJ</div>
+          <div class="team-meta">
+            <div class="team-name">Maria Júlia S. Franzoni</div>
+            <div class="team-role">Sócia · Diretora de Qualidade</div>
+          </div>
+        </div>
+        <p class="team-bio">Especialista em <strong>Microbiologia de Alimentos e Processos pela UNICAMP</strong>, graduada em Engenharia Química. Acumula <strong>9 anos em cargos de liderança em multinacional do setor alimentício</strong> — com domínio em proteínas, ingredientes funcionais e gestão de processos críticos. Em 2024 consolidou sua sociedade na Mikro Adventures, trazendo excelência técnica e rigor científico à equipe.</p>
+        <div class="team-creds">
+          <span class="cred-tag">Microbiologia de Alimentos</span>
+          <span class="cred-tag">Engenharia Química</span>
+          <span class="cred-tag">UNICAMP</span>
+          <span class="cred-tag">Gestão de Qualidade</span>
+          <span class="cred-tag">Suplementos alimentares</span>
+          <span class="cred-tag">Bebidas não alcoólicas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DIFERENCIAIS ═══════════════════ -->
+<section id="diferenciais" class="diff-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="section-num">05 · Por que a Mikro Adventures</span>
+        <h2 class="section-title">Autoridade técnica, <em>resultados reais</em></h2>
+      </div>
+      <p class="section-sub">Não somos uma consultoria genérica. Somos especialistas com histórico comprovado no setor de alimentos e bebidas saudáveis — e isso muda tudo na sua operação.</p>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="diff-head">
+          <span class="diff-num">01</span>
+          <span class="diff-tag">Vivência</span>
+        </div>
+        <h3>Experiência de quem <em>viveu o negócio</em></h3>
+        <p>Operamos indústria, erramos, acertamos e escalamos. Esse repertório prático é o diferencial que nenhum manual de consultoria substitui — sabemos onde a sua planta vai travar antes de você.</p>
+      </div>
+
+      <div class="diff-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="diff-head">
+          <span class="diff-num">02</span>
+          <span class="diff-tag">Profundidade</span>
+        </div>
+        <h3>Atuação <em>multissetorial</em> com especialização real</h3>
+        <p>De bebidas funcionais a suplementos, clean label, alimentos processados e agroindústria — conhecimento transversal com domínio profundo em cada segmento que atendemos.</p>
+      </div>
+
+      <div class="diff-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="diff-head">
+          <span class="diff-num">03</span>
+          <span class="diff-tag">Integração</span>
+        </div>
+        <h3>Visão técnica <em>+ estratégica</em> integrada</h3>
+        <p>Da formulação ao modelo de negócio — consultoria que conecta ciência dos alimentos com gestão, inovação e posicionamento de mercado em cada projeto que assumimos.</p>
+      </div>
+
+      <div class="diff-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="diff-head">
+          <span class="diff-num">04</span>
+          <span class="diff-tag">Alcance</span>
+        </div>
+        <h3>Presença <em>nacional</em>, atendimento personalizado</h3>
+        <p>Atuação em todas as regiões do Brasil e em mercados internacionais, com atendimento próximo, soluções sob medida e foco total nos objetivos específicos de cada cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DEPOIMENTOS ═══════════════════ -->
+<section id="depoimentos" class="testi-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="section-num">06 · Casos &amp; Depoimentos</span>
+        <h2 class="section-title">Resultados que <em>falam por si</em></h2>
+      </div>
+      <p class="section-sub">Mais de 100 clientes atendidos no Brasil e no exterior. Veja o que dizem sobre a experiência de trabalhar com a Mikro Adventures.</p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="testi-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">A Mikro Adventures transformou nosso processo produtivo. Eles entendem o negócio de dentro pra fora — já viveram tudo que estávamos passando. Em poucos meses saímos da produção artesanal para a escala industrial com segurança e qualidade.</p>
+        <div class="testi-author">
+          <div class="testi-author-avatar">RM</div>
+          <div>
+            <div class="testi-name">Ricardo M.</div>
+            <div class="testi-role">Fundador · Kombucha · SP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="testi-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Contratamos para o desenvolvimento do nosso suplemento líquido e a entrega superou as expectativas. Além da formulação, orientação completa de regulatório, rotulagem e posicionamento. Consultoria completa de verdade.</p>
+        <div class="testi-author">
+          <div class="testi-author-avatar">CF</div>
+          <div>
+            <div class="testi-name">Carolina F.</div>
+            <div class="testi-role">Diretora · Suplementos · MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="testi-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Precisávamos adequar nossa linha clean label às exigências da ANVISA e lançar um RTD funcional. A Mikro Adventures entregou as duas frentes com agilidade e profundidade técnica que raramente encontramos no mercado.</p>
+        <div class="testi-author">
+          <div class="testi-author-avatar">AL</div>
+          <div>
+            <div class="testi-name">André L.</div>
+            <div class="testi-role">CEO · Alimentos Funcionais · PR</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="testi-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">O treinamento ministrado para nossa equipe mudou completamente a cultura de qualidade da empresa. Didático, prático, baseado em experiência real. Recomendo sem hesitar para qualquer empresa do setor de alimentos.</p>
+        <div class="testi-author">
+          <div class="testi-author-avatar">JS</div>
+          <div>
+            <div class="testi-name">Juliana S.</div>
+            <div class="testi-role">Gerente · Agroindústria · GO</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="testi-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Trabalhamos juntos no desenvolvimento de uma linha de chás RTD em lata. O rigor técnico na definição das unidades de pasteurização e no controle de qualidade foi impressionante. Produto lançado, aprovado e dentro do custo planejado.</p>
+        <div class="testi-author">
+          <div class="testi-author-avatar">MP</div>
+          <div>
+            <div class="testi-name">Marcos P.</div>
+            <div class="testi-role">Sócio · Bebidas · RJ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="testi-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">A consultoria foi fundamental para a obtenção do nosso SIF. Fomos guiados por toda a burocracia com paciência e expertise. Um parceiro estratégico que entende tanto da parte técnica quanto do negócio como um todo.</p>
+        <div class="testi-author">
+          <div class="testi-author-avatar">TN</div>
+          <div>
+            <div class="testi-name">Tatiana N.</div>
+            <div class="testi-role">Proprietária · Apicultura · BA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section id="faq" class="faq-section">
+  <div class="container-narrow">
+    <div class="section-head">
+      <div class="section-head-l">
+        <span class="section-num">07 · Perguntas frequentes</span>
+        <h2 class="section-title">Dúvidas <em>antes</em> de começar</h2>
+      </div>
+      <p class="section-sub">Respostas honestas sobre como trabalhamos, o que esperar e como podemos apoiar a sua operação a partir do primeiro contato.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 240ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-num">01</span>
+          <span class="faq-q-text">Vocês atendem startups em estágio inicial ou apenas indústrias estabelecidas?</span>
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Atendemos os dois perfis com a mesma profundidade técnica. Para <strong>startups</strong>, costumamos começar pelo diagnóstico e desenvolvimento de produto. Para <strong>indústrias estabelecidas</strong>, o foco geralmente recai sobre ajustes de processo, regulatório, novos lançamentos ou capacitação de equipe.</div></div>
+      </div>
+
+      <div class="faq-item" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-num">02</span>
+          <span class="faq-q-text">Qual o investimento médio de um projeto de consultoria?</span>
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">O investimento varia conforme escopo, complexidade técnica e duração do projeto. Após o diagnóstico inicial — gratuito e sem compromisso — apresentamos uma proposta com <strong>etapas, prazos e valores transparentes</strong>. Trabalhamos com projetos pontuais e contratos de assessoria contínua.</div></div>
+      </div>
+
+      <div class="faq-item" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-num">03</span>
+          <span class="faq-q-text">Vocês atendem presencialmente ou apenas de forma remota?</span>
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Ambos. A maior parte da execução acontece de forma remota — com videochamadas, compartilhamento de relatórios e acompanhamento contínuo —, e fazemos visitas presenciais à planta quando o projeto exige (etapas de piloto, escalonamento, diagnóstico de processos). Atendemos clientes no <strong>Brasil inteiro e no exterior</strong>.</div></div>
+      </div>
+
+      <div class="faq-item" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-num">04</span>
+          <span class="faq-q-text">Quanto tempo leva um projeto típico do começo ao fim?</span>
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Um diagnóstico técnico leva de <strong>2 a 4 semanas</strong>. Um desenvolvimento de produto completo, com escalonamento e regulatório, costuma rodar entre <strong>3 e 9 meses</strong>. Trabalhamos com cronograma definido na proposta — sem prazos abertos.</div></div>
+      </div>
+
+      <div class="faq-item" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 120ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-num">05</span>
+          <span class="faq-q-text">Existe sigilo sobre as formulações e dados que compartilho?</span>
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Trabalhamos com <strong>NDA (acordo de confidencialidade)</strong> em todos os projetos, garantindo proteção total de formulações, processos, dados comerciais e propriedade intelectual. Esse é um pilar inegociável da nossa atuação.</div></div>
+      </div>
+
+      <div class="faq-item" style="opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 180ms, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+        <button class="faq-q" aria-expanded="false">
+          <span class="faq-q-num">06</span>
+          <span class="faq-q-text">Como começa a nossa conversa inicial?</span>
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Você nos envia uma mensagem pelo formulário ou WhatsApp. Em até <strong>24h úteis</strong>, agendamos uma conversa de 30-45 minutos para entender o seu desafio. Não há compromisso nem cobrança nessa etapa — saímos dela com clareza sobre como podemos (ou não) ajudar.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+<div class="cta-banner">
+  <div class="cta-inner">
+    <div>
+      <h2>Vamos transformar sua ideia em um <em>produto pronto</em> para o mercado?</h2>
+      <p class="cta-banner-sub">Diagnóstico inicial sem compromisso. Resposta em até 24h úteis. Atendimento no Brasil e exterior.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato" class="cta-banner-btn">Solicitar consultoria <span class="arrow">→</span></a>
+      <span class="cta-note"><span class="dot"></span>Aceitando projetos · Q2 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ CONTATO ═══════════════════ -->
+<section id="contato" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">08 · Fale conosco</span>
+        <h2 class="contact-info-title" style="margin-top:1rem">Pronto para levar seu produto ao <em>próximo nível</em>?</h2>
+        <p>Entre em contato para uma conversa inicial sem compromisso. Entendemos o seu desafio e apresentamos como podemos ajudar — com a transparência de quem trabalha por relacionamento, não por venda.</p>
+
+        <a class="contact-item" href="https://wa.me/5519971041286?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12 21.8a9.83 9.83 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37A9.86 9.86 0 0 1 2.14 12c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.5 3.5A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65A11.88 11.88 0 0 0 12.05 24h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.45-8.6"></path></svg>
+          </div>
+          <div>
+            <div class="contact-item-text">WhatsApp</div>
+            <div class="contact-item-sub">+55 (19) 97104-1286 · Resposta em até 24h</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="https://instagram.com/mikro.adventures" target="_blank" rel="noopener">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+          <div>
+            <div class="contact-item-text">Instagram</div>
+            <div class="contact-item-sub">@mikro.adventures · Bastidores e cases</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="mailto:contato@mikroadventures.com.br">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div>
+            <div class="contact-item-text">E-mail</div>
+            <div class="contact-item-sub">contato@mikroadventures.com.br</div>
+          </div>
+        </a>
+
+        <div class="contact-coverage">
+          <span class="contact-coverage-label">Cobertura</span>
+          <p><strong>Brasil &amp; exterior.</strong> Consultoria presencial e remota disponível em todas as regiões — São Paulo, Sul, Nordeste, Centro-Oeste, Norte e mercados internacionais selecionados.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <div class="contact-form-head">
+          <h3>Envie uma mensagem</h3>
+          <span class="contact-form-meta">Formulário · 2 min</span>
+        </div>
+        <form action="https://formspree.io/f/xqejqqjk" method="POST" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nome <span class="req">obrigatório</span></label>
+              <input type="text" name="nome" placeholder="Seu nome completo" required="">
+            </div>
+            <div class="form-group">
+              <label>E-mail <span class="req">obrigatório</span></label>
+              <input type="email" name="email" placeholder="voce@email.com" required="">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Empresa / Projeto</label>
+              <input type="text" name="empresa" placeholder="Nome da sua empresa">
+            </div>
+            <div class="form-group">
+              <label>WhatsApp</label>
+              <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Em qual etapa você está? <span class="req">obrigatório</span></label>
+            <select name="etapa" required="">
+              <option value="" disabled="" selected="">Selecione uma opção</option>
+              <option>Tenho uma ideia e quero validar</option>
+              <option>Estou em P&amp;D / desenvolvendo o produto</option>
+              <option>Quero escalar do artesanal para o industrial</option>
+              <option>Preciso de regulatório / certificação</option>
+              <option>Quero capacitar minha equipe</option>
+              <option>Outro / preciso entender melhor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Como podemos ajudar? <span class="req">obrigatório</span></label>
+            <textarea name="mensagem" placeholder="Descreva brevemente seu desafio ou projeto..." required=""></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submit-btn"><span>Enviar mensagem</span> <span class="arrow">→</span></button>
+          <p class="form-disclaimer">Ao enviar, você concorda em receber retorno da nossa equipe. Não compartilhamos dados com terceiros.</p>
+          <div class="form-success" id="form-success">✓ Mensagem enviada! Retornaremos em breve.</div>
+          <div class="form-error" id="form-error">✕ Algo deu errado. Tente pelo WhatsApp.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-wrap">
+      <a class="footer-brand" href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#">
+        <span class="footer-brand-mark">Mikro <em>Adventures</em></span>
+        <span class="footer-brand-tag">Soluções</span>
+      </a>
+      <p class="footer-tagline">Do conceito à escala, com critério. Consultoria técnica e estratégica em alimentos e bebidas.</p>
+      <div class="footer-meta">
+        <div>SÃO PAULO · BRASIL</div>
+        <div>+ 100 PROJETOS · 5 REGIÕES · ATUAÇÃO GLOBAL</div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#metodo">Método</a></li>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#servicos">Serviços</a></li>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#setores">Setores</a></li>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#equipe">Equipe</a></li>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#depoimentos">Casos</a></li>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5519971041286" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://instagram.com/mikro.adventures" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:contato@mikroadventures.com.br">E-mail</a></li>
+        <li><a href="file:///C:/Users/User/Documents/CLAUDE/treinamento/mikro-adventures-v12.html#contato">Formulário</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Insights sobre P&amp;D, regulatório e mercado de alimentos e bebidas — 1 e-mail por mês, sem ruído.</p>
+      <form onsubmit="event.preventDefault(); this.querySelector(&#39;button&#39;).textContent=&#39;Inscrito ✓&#39;">
+        <input type="email" placeholder="voce@email.com" required="">
+        <button type="submit" aria-label="Inscrever">→</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 MIKRO ADVENTURES SOLUÇÕES · CNPJ XX.XXX.XXX/0001-XX</div>
+    <div class="footer-social">
+      <a href="https://wa.me/5519971041286" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12 21.8a9.83 9.83 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37A9.86 9.86 0 0 1 2.14 12c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.5 3.5A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65A11.88 11.88 0 0 0 12.05 24h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.45-8.6"></path></svg>
+      </a>
+      <a href="https://instagram.com/mikro.adventures" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ FLOATING WHATSAPP ═══════════════════ -->
+<a href="https://wa.me/5519971041286?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Conversar pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+</a>
+
+<script>
+// ── Scroll progress ──
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  sp.style.width = pct + '%';
+}, { passive: true });
+
+// ── Nav scroll state + active section ──
+const nav = document.getElementById('navbar');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 30) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}, { passive: true });
+
+const sections = ['metodo','servicos','setores','equipe','depoimentos','faq','contato'];
+const setActive = () => {
+  const scrollPos = window.scrollY + 140;
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollPos) current = id;
+  });
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+};
+window.addEventListener('scroll', setActive, { passive: true });
+
+// ── Mobile menu ──
+(function(){
+  const mt = document.getElementById('menuToggle');
+  const mm = document.getElementById('mobileMenu');
+  const mo = document.getElementById('menuOverlay');
+  const mc = document.getElementById('menuClose');
+  if (!mt || !mm || !mo || !mc) return;
+
+  function openMenu(e){
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    mm.classList.add('open');
+    mo.classList.add('open');
+    mt.setAttribute('aria-expanded','true');
+    mm.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu(){
+    mm.classList.remove('open');
+    mo.classList.remove('open');
+    mt.setAttribute('aria-expanded','false');
+    mm.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  mt.addEventListener('click', openMenu);
+  mc.addEventListener('click', closeMenu);
+  mo.addEventListener('click', closeMenu);
+  document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+})();
+
+// ── Scroll-triggered animations ──
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.service-card, .diff-card, .testi-card, .sector-tag, .team-card, .method-step, .faq-item, .about-quote-block').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)';
+  el.style.transitionDelay = (i % 6) * 60 + 'ms';
+  obs.observe(el);
+});
+
+// ── FAQ accordion ──
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ── Form submission ──
+const form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+    const original = btn.innerHTML;
+    btn.innerHTML = '<span>Enviando...</span>';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        success.style.display = 'flex';
+        error.style.display = 'none';
+        btn.innerHTML = '<span>Mensagem enviada ✓</span>';
+      } else { throw new Error('erro'); }
+    } catch {
+      error.style.display = 'flex';
+      success.style.display = 'none';
+      btn.innerHTML = original;
+      btn.disabled = false;
+    }
+  });
+}
+</script>
+
+
+</body></html>
